@@ -9,12 +9,12 @@ public class ItemsFactory implements AbstractFactory{
     }
 
     @Override
-    public Address createAddress(String address, String City, String POCode) {
-        return null;
+    public Address createAddress(String address, String city, String POCode) {
+        return new GenericAddress(address,city,POCode,this.country);
     }
 
     @Override
     public PhoneNumber createPhoneNumber(String prefix, String phoneNumber) {
-        return null;
+        return new GenericPhoneNumber(prefix,phoneNumber);
     }
 }

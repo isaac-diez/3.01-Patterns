@@ -1,5 +1,7 @@
 package org.Level2.Model;
 
+import java.util.Objects;
+
 public class GenericPhoneNumber implements PhoneNumber {
 
     private String countryCode, phoneNumber;
@@ -12,5 +14,11 @@ public class GenericPhoneNumber implements PhoneNumber {
     @Override
     public String getFullPhoneNumber() {
         return this.countryCode + " " + this.phoneNumber;
+    }
+
+
+    @Override
+    public String toString() {
+        return getFullPhoneNumber();
     }
 }

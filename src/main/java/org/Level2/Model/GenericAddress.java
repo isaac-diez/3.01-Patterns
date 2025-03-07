@@ -1,5 +1,7 @@
 package org.Level2.Model;
 
+import java.util.Objects;
+
 public class GenericAddress implements Address {
 
     private String address, city, country, POCode;
@@ -14,5 +16,10 @@ public class GenericAddress implements Address {
     @Override
     public String getFullAddress() {
         return this.address + ", " + this.POCode + " - " + this.city+", "+this.country ;
+    }
+
+    @Override
+    public String toString() {
+        return getFullAddress();
     }
 }

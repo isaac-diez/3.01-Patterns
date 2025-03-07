@@ -1,16 +1,18 @@
 package org.Level2.Model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Agenda {
 
-    private List<Address> agendaAddress;
-    private List<PhoneNumber> agendaPhoneNumber;
+    private Set<Address> agendaAddress;
+    private Set<PhoneNumber> agendaPhoneNumber;
 
     public Agenda() {
-        this.agendaAddress = new ArrayList<>();
-        this.agendaPhoneNumber = new ArrayList<>();
+        this.agendaAddress = new HashSet<>();
+        this.agendaPhoneNumber = new HashSet<>();
     }
 
     public void addAddress(Address newAddress){
@@ -21,11 +23,11 @@ public class Agenda {
         this.agendaPhoneNumber.add(newPhoneNumber);
     }
 
-    public List<Address> getAgendaAddress() {
+    public Set<Address> getAgendaAddress() {
         return agendaAddress;
     }
 
-    public List<PhoneNumber> getAgendaPhoneNumber() {
+    public Set<PhoneNumber> getAgendaPhoneNumber() {
         return agendaPhoneNumber;
     }
 
