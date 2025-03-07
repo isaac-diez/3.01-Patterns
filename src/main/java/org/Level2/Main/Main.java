@@ -1,21 +1,22 @@
 package org.Level2.Main;
 
-import org.Level2.Model.AbstractFactory;
-import org.Level2.Model.FactoryProducer;
-import org.Level2.Model.Item;
+import org.Level2.Model.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-//        try {
-            AbstractFactory factory = FactoryProducer.getFactory("address");
-//        } catch (IllegalArgumentException e) {
-//            System.out.println(e.getMessage());
-//
-//        }
+        AbstractFactory SpainFactory = FactoryProducer.getFactory("Spain");
 
-        Item item1 = factory.
+        Address spainAddress = SpainFactory.createAddress("Avda. Diagonal 198", "Barcelona", "08010");
+        PhoneNumber spainPhone = SpainFactory.createPhoneNumber("+34", "93548875");
+
+        Agenda agenda = new Agenda();
+
+        agenda.addAddress(spainAddress);
+        agenda.addPhone(spainPhone);
+
+        System.out.println(agenda);
     }
 }
 
